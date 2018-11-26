@@ -2,7 +2,7 @@
 
 
 ## Comprimir / Descomprimir
-```
+```Shell
 Archivos .tar.gz:
 Comprimir: tar -czvf empaquetado.tar.gz /carpeta/a/empaquetar/
 Descomprimir: tar -xzvf archivo.tar.gz
@@ -25,22 +25,22 @@ Descomprimir: unzip archivo.zip
 ```
 
 ## Borrar completamente paquetes, hasta sus ficheros de configuracion
-```
+```Shell
 dpkg --purge $(dpkg --list | grep ^rc | awk  '{ print $2; }')
 
 ```
 
 ## Change Encoding:
-```
+```Shell
 iconv -f old-encoding -t new-encoding file.txt > newfile.txt
 ```
 ## Supported encodings with (that's a lower-case L, not a one):
-```
+```Shell
 iconv -l 
 ```
 
 ## Echo coloreados
-```
+```Shell
 black='\E[30;47m'
 red='\E[31;47m'
 green='\E[32;47m'
@@ -53,3 +53,8 @@ white='\E[37;47m'
 \033[1m -> BOLD
 \033[0m -> NORMAL
 ```
+
+## Readme.md resources
+
+- Code highlight list: https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
+- MD Help: https://help.github.com/categories/writing-on-github/
