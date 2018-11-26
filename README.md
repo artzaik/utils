@@ -1,5 +1,10 @@
 # utils
 
+## SSH legacy
+```Shell
+ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 123.123.123.123
+```
+source: https://unix.stackexchange.com/questions/340844/how-to-enable-diffie-hellman-group1-sha1-key-exchange-on-debian-8-0
 
 ## Comprimir / Descomprimir
 ```Shell
