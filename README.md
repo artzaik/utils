@@ -1,7 +1,7 @@
-## utils
+# utils
 
 
-# Comprimir / Descomprimir
+## Comprimir / Descomprimir
 ```
 Archivos .tar.gz:
 Comprimir: tar -czvf empaquetado.tar.gz /carpeta/a/empaquetar/
@@ -24,22 +24,22 @@ Comprimir: zip archivo.zip carpeta
 Descomprimir: unzip archivo.zip
 ```
 
-# Borrar completamente paquetes, hasta sus ficheros de configuracion
+## Borrar completamente paquetes, hasta sus ficheros de configuracion
 ```
 dpkg --purge $(dpkg --list | grep ^rc | awk  '{ print $2; }')
 
 ```
 
-# Change Encoding:
+## Change Encoding:
 ```
 iconv -f old-encoding -t new-encoding file.txt > newfile.txt
 ```
-# Supported encodings with (that's a lower-case L, not a one):
+## Supported encodings with (that's a lower-case L, not a one):
 ```
 iconv -l 
 ```
 
-# Echo coloreados
+## Echo coloreados
 ```
 black='\E[30;47m'
 red='\E[31;47m'
