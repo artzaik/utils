@@ -63,3 +63,8 @@ white='\E[37;47m'
 
 - Code highlight list: https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
 - MD Help: https://help.github.com/categories/writing-on-github/
+
+## Change MKV audio position and default ffmpeg
+```Shell
+ffmpeg -i frozen.el.reino.del.hielo.2013.mhd.1080p.esp.ing.catl.ac3.torrent.mkv -map 0:v:0 -map 0:a:1 -map 0:a:2 -map 0:a:0 -disposition:a:0 default -disposition:a:1 none -disposition:a:2 none -c copy frozen.mkv
+```
