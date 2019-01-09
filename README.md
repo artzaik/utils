@@ -68,3 +68,27 @@ white='\E[37;47m'
 ```Shell
 ffmpeg -i input.mkv -map 0:v:0 -map 0:a:1 -map 0:a:2 -map 0:a:0 -disposition:a:0 default -disposition:a:1 none -disposition:a:2 none -c copy output.mkv
 ```
+
+## Find text in files
+```Shell
+grep -rnw '/path/to/somewhere/' -e 'pattern'
+```
+  -r or -R is recursive,
+  -n is line number, and
+  -w stands for match the whole word.
+  -l (lower-case L) can be added to just give the file name of matching files.
+
+Along with these, --exclude, --include, --exclude-dir flags could be used for efficient searching:
+
+  This will only search through those files which have .c or .h extensions:
+```Shell
+    grep --include=\*.{c,h} -rnw '/path/to/somewhere/' -e "pattern"
+```
+  This will exclude searching all the files ending with .o extension:
+```Shell
+    grep --exclude=*.o -rnw '/path/to/somewhere/' -e "pattern"
+```
+For directories it's possible to exclude a particular directory(ies) through --exclude-dir parameter. For example, this will exclude the dirs dir1/, dir2/ and all of them matching *.dst/:
+```Shell
+    grep --exclude-dir={dir1,dir2,*.dst} -rnw '/path/to/somewhere/' -e "pattern"
+```
