@@ -96,7 +96,7 @@ For directories it's possible to exclude a particular directory(ies) through --e
 ## Regular Expressions
 1 - IPv4
 ```Shell
-^((^|\\.)((25[0-5])|(2[0-4]\\d)|(1\\d\\d)|([1-9]?\\d))){4}$
+^((^|\.)((25[0-5])|(2[0-4]\d)|(1\d\d)|([1-9]?\d))){4}$
 ```
 2 - Netmask
 ```Shell
