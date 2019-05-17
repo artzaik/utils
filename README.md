@@ -92,3 +92,14 @@ For directories it's possible to exclude a particular directory(ies) through --e
 ```Shell
     grep --exclude-dir={dir1,dir2,*.dst} -rnw '/path/to/somewhere/' -e "pattern"
 ```
+
+## Regular Expressions
+1 - IPv4
+```Shell
+^((^|\\.)((25[0-5])|(2[0-4]\\d)|(1\\d\\d)|([1-9]?\\d))){4}$
+```
+2 - Netmask
+```Shell
+^(((255\.){3}(255|254|252|248|240|224|192|128|0+))|((255\.){2}(255|254|252|248|240|224|192|128|0+)\.0)|((255\.)(255|254|252|248|240|224|192|128|0+)(\.0+){2})|((255|254|252|248|240|224|192|128|0+)(\.0+){3}))$
+```
+https://www.regextester.com/97579
