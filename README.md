@@ -108,3 +108,12 @@ https://www.regextester.com/97579
 ```Shell
 ^((^|\:)([0-9A-Fa-f][0-9A-Fa-f])){6}$
 ```
+
+## php background process using exec function
+
+You have to reroute programs output somewhere too, usually /dev/null
+
+```PHP
+exec($cmd . " > /dev/null &");
+```
+
