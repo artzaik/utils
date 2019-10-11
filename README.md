@@ -38,6 +38,7 @@ dpkg --purge $(dpkg --list | grep ^rc | awk  '{ print $2; }')
 ## Change Encoding:
 ```Shell
 iconv -f old-encoding -t new-encoding file.txt > newfile.txt
+
 ```
 ## Supported encodings with (that's a lower-case L, not a one):
 ```Shell
@@ -116,4 +117,9 @@ You have to reroute programs output somewhere too, usually /dev/null
 ```PHP
 exec($cmd . " > /dev/null &");
 ```
+## SQLite
 
+- EPOCH time
+```Shell
+SELECT strftime('%s','now');
+```
