@@ -123,3 +123,6 @@ exec($cmd . " > /dev/null &");
 ```Shell
 SELECT strftime('%s','now');
 ```
+
+# Memory leaks
+[Fugas de Memoria](fugasMemoria.md)
