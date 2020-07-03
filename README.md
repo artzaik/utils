@@ -126,3 +126,16 @@ SELECT strftime('%s','now');
 
 # Memory leaks
 [Fugas de Memoria](fugasMemoria.md)
+
+# GIT keys SSH
+```Shell
+$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+Permisos 700
+
+```Shell
+$ eval "$(ssh-agent -s)"
+$ ssh-add ~/.ssh/id_rsa
+```
+
+
