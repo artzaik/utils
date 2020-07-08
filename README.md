@@ -124,10 +124,10 @@ exec($cmd . " > /dev/null &");
 SELECT strftime('%s','now');
 ```
 
-# Memory leaks
+## Memory leaks
 [Fugas de Memoria](fugasMemoria.md)
 
-# GIT keys SSH
+## GIT keys SSH
 ```Shell
 $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
@@ -138,4 +138,19 @@ $ eval "$(ssh-agent -s)"
 $ ssh-add ~/.ssh/id_rsa
 ```
 
+## Add colored GIT
+# Add git branch if its present to PS1
+
+Add these lines in .bashrc
+```Shell
+parse_git_branch() {
+ git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+if [ "$color_prompt" = yes ]; then
+ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\$ '
+else
+ PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(parse_git_branch)\$ '
+fi
+unset color_prompt force_color_prompt
+```
 
