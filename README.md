@@ -1,3 +1,21 @@
+- [utils](#utils)
+  * [SSH legacy](#ssh-legacy)
+  * [Comprimir / Descomprimir](#comprimir---descomprimir)
+  * [Borrar completamente paquetes, hasta sus ficheros de configuracion](#borrar-completamente-paquetes--hasta-sus-ficheros-de-configuracion)
+  * [Change Encoding:](#change-encoding-)
+  * [Supported encodings with (that's a lower-case L, not a one):](#supported-encodings-with--that-s-a-lower-case-l--not-a-one--)
+  * [Echo coloreados](#echo-coloreados)
+  * [Readme.md resources](#readmemd-resources)
+  * [Change MKV audio position and default ffmpeg](#change-mkv-audio-position-and-default-ffmpeg)
+  * [Find text in files](#find-text-in-files)
+  * [Regular Expressions](#regular-expressions)
+  * [php background process using exec function](#php-background-process-using-exec-function)
+  * [SQLite](#sqlite)
+  * [Memory leaks](#memory-leaks)
+  * [GIT keys SSH](#git-keys-ssh)
+  * [Add colored GIT](#add-colored-git)
+
+
 # utils
 
 ## SSH legacy
@@ -139,7 +157,6 @@ $ ssh-add ~/.ssh/id_rsa
 ```
 
 ## Add colored GIT
-# Add git branch if its present to PS1
 
 Add these lines in .bashrc
 ```Shell
