@@ -171,3 +171,5 @@ fi
 unset color_prompt force_color_prompt
 ```
 
+More options, see https://github.com/artzaik/gitstuff
+
