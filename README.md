@@ -14,6 +14,7 @@
   * [Memory leaks](#memory-leaks)
   * [GIT keys SSH](#git-keys-ssh)
   * [Add colored GIT](#add-colored-git)
+  * [Add user to shared folder in Virtualbox](#add-user-to-shared-folder-in-Virtualbox)
 
 
 # utils
@@ -173,3 +174,8 @@ unset color_prompt force_color_prompt
 
 More options, see https://github.com/artzaik/gitstuff
 
+## Add user to shared folder in Virtualbox
+
+```Shell
+sudo adduser $USER vboxsf
+```
