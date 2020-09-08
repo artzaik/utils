@@ -15,6 +15,7 @@
   * [GIT keys SSH](#git-keys-ssh)
   * [Add colored GIT](#add-colored-git)
   * [Add user to shared folder in Virtualbox](#add-user-to-shared-folder-in-Virtualbox)
+  * [How to Add SSH Public Key to Server](#how-to-add-ssh-public-key-to-server)
 
 
 # utils
@@ -179,3 +180,11 @@ More options, see https://github.com/artzaik/gitstuff
 ```Shell
 sudo adduser $USER vboxsf
 ```
+
+## How to Add SSH Public Key to Server
+
+```Shell
+ssh-copy-id -i ~/.ssh/id_rsa.pub YOUR_USER_NAME@IP_ADDRESS_OF_THE_SERVER
+```
+
+More: https://linuxhandbook.com/add-ssh-public-key-to-server/
