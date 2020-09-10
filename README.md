@@ -16,6 +16,7 @@
   * [Add colored GIT](#add-colored-git)
   * [Add user to shared folder in Virtualbox](#add-user-to-shared-folder-in-Virtualbox)
   * [How to Add SSH Public Key to Server](#how-to-add-ssh-public-key-to-server)
+  * [Restore Deleted Commit](#restore-deleted-commit)
 
 
 # utils
@@ -188,3 +189,12 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub YOUR_USER_NAME@IP_ADDRESS_OF_THE_SERVER
 ```
 
 More: https://linuxhandbook.com/add-ssh-public-key-to-server/
+
+## Restore deleted commit
+
+git reflog is your friend. Find the commit that you want to be on in that list and you can reset to it (for example:git reset --hard e870e41).
+
+(If you didn't commit your changes... you might be in trouble - commit early, and commit often!)
+
+https://stackoverflow.com/questions/10099258/how-can-i-recover-a-lost-commit-in-git
+
