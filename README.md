@@ -190,6 +190,19 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub YOUR_USER_NAME@IP_ADDRESS_OF_THE_SERVER
 
 More: https://linuxhandbook.com/add-ssh-public-key-to-server/
 
+## ssh SOCKSv5 
+
+```shell
+ssh -p443 -D4445 -N pi@lekunberri.ddns.net
+```
+-p is your proxy computer ssh port
+-D is de socksv5 port
+-N is not to start shell
+
+After that, you have to configure socksv5 in firefox. url: localhost, port 4445
+
+fuck off firewall!
+
 ## Restore deleted commit
 
 git reflog is your friend. Find the commit that you want to be on in that list and you can reset to it (for example:git reset --hard e870e41).
