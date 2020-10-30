@@ -16,6 +16,7 @@
   * [Add colored GIT](#add-colored-git)
   * [Add user to shared folder in Virtualbox](#add-user-to-shared-folder-in-Virtualbox)
   * [How to Add SSH Public Key to Server](#how-to-add-ssh-public-key-to-server)
+  * [ssh SOCKSv5](#ssh-SOCKSv5)
   * [Restore Deleted Commit](#restore-deleted-commit)
 
 
